@@ -18,6 +18,10 @@ use App\Http\Controllers\Admins\AuthorsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('backend.layout.page');
+})->name('homepage');
+
 Route::get('/1', function () {
     return view('backend.layout.dashboard');
 });

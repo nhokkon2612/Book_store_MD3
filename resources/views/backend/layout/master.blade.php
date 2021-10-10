@@ -14,7 +14,14 @@
     <link rel="shortcut icon" href="{{asset('master/images/favicon.png')}}"/>
 </head>
 <body class="error404 woocommerce-no-js lightbox nav-dropdown-has-arrow">
-@include('sweetalert::alert')
+{{--<div>--}}
+
+
+
+{{--    @include('backend.layout.navbar')--}}
+{{--    @include('backend.book.list')--}}
+{{--    @include('backend.layout.sidebar')--}}
+{{--</div>--}}
 
 <div class="container-scroller">
     @include('backend.layout.navbar')
@@ -43,6 +50,7 @@
                 <div class="tiles default light"></div>
             </div>
         </div>
+
 
     @include('backend.layout.sidebar')
     <!-- partial -->

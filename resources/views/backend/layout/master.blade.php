@@ -6,22 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="master/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="master/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="master/vendors/css/vendor.bundle.addons.css">
-    <link rel="stylesheet" href="master/vendors/iconfonts/font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="master/css/style.css">
-    <link rel="shortcut icon" href="master/images/favicon.png"/>
+    <link rel="stylesheet" href="{{asset('master/vendors/iconfonts/mdi/css/materialdesignicons.min.css')}}">
+    <link rel="stylesheet" href="{{asset('master/vendors/css/vendor.bundle.base.css')}}">
+    <link rel="stylesheet" href="{{asset('master/vendors/css/vendor.bundle.addons.css')}}">
+    <link rel="stylesheet" href="{{asset('master/vendors/iconfonts/font-awesome/css/font-awesome.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('master/css/style.css')}}">
+    <link rel="shortcut icon" href="{{asset('master/images/favicon.png')}}"/>
 </head>
 <body class="error404 woocommerce-no-js lightbox nav-dropdown-has-arrow">
-{{--<div>--}}
-
-
-
-{{--    @include('backend.layout.navbar')--}}
-{{--    @include('backend.book.list')--}}
-{{--    @include('backend.layout.sidebar')--}}
-{{--</div>--}}
+@include('sweetalert::alert')
 
 <div class="container-scroller">
     @include('backend.layout.navbar')
@@ -51,9 +44,8 @@
             </div>
         </div>
 
-
-        @include('backend.layout.sidebar')
-        <!-- partial -->
+    @include('backend.layout.sidebar')
+    <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
                 @yield('content')
@@ -61,19 +53,19 @@
             @include('backend.layout.footer')
         </div>
 
-    <!-- main-panel ends -->
+        <!-- main-panel ends -->
     </div>
     <!-- page-body-wrapper ends -->
 </div>
 
 
-<script src="master/vendors/js/vendor.bundle.base.js"></script>
-<script src="master/vendors/js/vendor.bundle.addons.js"></script>
-<script src="master/js/off-canvas.js"></script>
-<script src="master/js/hoverable-collapse.js"></script>
-<script src="master/js/misc.js"></script>
-<script src="master/js/settings.js"></script>
-<script src="master/js/todolist.js"></script>
-<script src="master/js/dashboard.js"></script>
+<script src="{{asset('master/vendors/js/vendor.bundle.base.js')}}"></script>
+<script src="{{asset('master/vendors/js/vendor.bundle.addons.js')}}"></script>
+<script src="{{asset('master/js/off-canvas.js')}}"></script>
+<script src="{{asset('master/js/hoverable-collapse.js')}}"></script>
+<script src="{{asset('master/js/misc.js')}}"></script>
+<script src="{{asset('master/js/settings.js')}}"></script>
+<script src="{{asset('master/js/todolist.js')}}"></script>
+<script src="{{asset('master/js/dashboard.js')}}"></script>
 </body>
 </html>

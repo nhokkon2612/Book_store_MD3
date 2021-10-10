@@ -7,7 +7,6 @@ use App\Http\Controllers\Admins\CustomerController;
 use App\Http\Controllers\Admins\PublisherController;
 use App\Http\Controllers\Admins\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admins\LoginController;
 use App\Http\Controllers\Admins\AuthorsController;
 
 /*

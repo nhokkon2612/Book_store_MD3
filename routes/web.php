@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Admins\BookController;
-use App\Http\Controllers\Admins\CategorieController;
 use App\Http\Controllers\Admins\CategoryController;
 use App\Http\Controllers\Admins\CustomerController;
 use App\Http\Controllers\Admins\PublisherController;
@@ -19,9 +18,6 @@ use App\Http\Controllers\Admins\AuthorsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('backend.books.list');
-});
 Route::get('/1', function () {
     return view('backend.layout.dashboard');
 });

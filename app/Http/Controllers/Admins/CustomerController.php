@@ -12,7 +12,7 @@ class CustomerController extends Controller
 {
     public function index()
     {
-        $customers = Customer::all();
+        $customers = Customer::paginate(4);
 
         return view('backend.customers.list', compact('customers'));
 
@@ -39,7 +39,7 @@ class CustomerController extends Controller
         $customers->date_of_birth	 = $request->input('date_of_birth');
         $customers->save();
         session::flash('success', 'Tạo mới thành công');
-        return redirect()->route('backend.customers.index');
+        return redirect()->route('admin.customers.index');
     }
 
     public function edit($id)
@@ -69,7 +69,7 @@ class CustomerController extends Controller
         $customers->save();
         Session::flash('success', 'Cập nhật thành công');
         //tao moi xong quay ve trang danh sach task
-        return redirect()->route('backend.customer.index');
+        return redirect()->route('admin.customers.index');
     }
     public function destroy($id){
         $customers = Customer::find($id);
@@ -83,6 +83,6 @@ class CustomerController extends Controller
 
         $customers->delete();
         Session::flash('success','Xóa thành công');
-        return redirect()->route('backend.customers.index');
+        return redirect()->route('admin.customers.index');
     }
 }

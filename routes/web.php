@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admins\BookController;
 use App\Http\Controllers\Admins\CategoryController;
 use App\Http\Controllers\Admins\CustomerController;
+use App\Http\Controllers\Admins\LoginController;
 use App\Http\Controllers\Admins\PublisherController;
 use App\Http\Controllers\Admins\UserController;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,7 @@ Route::get('/2', function () {
     return view('layouts.master');
 });
 
+Route::get('/login', [LoginController::class,'showLogin'])->name('admin.login');
 
 Route::prefix('books')->group(function () {
     Route::get('/', [BookController::class, 'index'])->name('admin.books.index');

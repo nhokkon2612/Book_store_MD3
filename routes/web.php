@@ -21,10 +21,13 @@ use App\Http\Controllers\Admins\AuthorsController;
 |
 */
 Route::get('/', function () {
-    return view('backend.book.list');
+    return view('backend.books.list');
 });
 Route::get('/1', function () {
     return view('backend.layout.dashboard');
+});
+Route::get('/2', function () {
+    return view('layouts.master');
 });
 
 

@@ -1,5 +1,4 @@
 @extends('backend.layout.master')
-
 @section('content')
 @section('content')
     <style>

@@ -37,7 +37,7 @@
                         Hoạt động
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{{route('admin.logout')}}">
                         <i class="mdi mdi-logout mr-2 text-primary"></i>
                         Đăng xuất
                     </a>

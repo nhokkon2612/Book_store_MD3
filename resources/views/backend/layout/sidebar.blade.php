@@ -19,7 +19,7 @@
         </li>
         <li class="nav-item">
 
-            <a class="nav-link" href="{{route('homepage')}}">
+            <a class="nav-link" href="{{route('admin.layout.dashboard')}}">
 
                 <span class="menu-title">Trang chủ</span>
                 <i class="mdi mdi-home menu-icon"></i>
@@ -34,11 +34,6 @@
             </a>
             <div class="collapse" id="page-layouts">
                 <ul class="nav flex-column sub-menu">
-                    <li style="border:1px solid black; height:40px">
-                        <input type="text" style="height:80%" class="form-control bg-transparent border-0"
-                               placeholder="Tìm khách hàng">
-                    </li>
-
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.customers.index')}}">Danh sách khách
                             hàng</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.customers.create')}}">Thêm</a></li>
@@ -57,16 +52,9 @@
             </a>
             <div class="collapse" id="sidebar-layouts">
                 <ul class="nav flex-column sub-menu">
-
-                    <li style="border:1px solid black; height:40px">
-                        <input type="text" style="height:80%" class="form-control bg-transparent border-0"
-                               placeholder="Tìm sản phẩm">
-                    </li>
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.books.index')}}">Danh sách sản
                             phẩm</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.books.create')}}">Thêm</a></li>
-
                 </ul>
             </div>
         </li>
@@ -80,16 +68,9 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-
-                    <li style="border:1px solid black; height:40px">
-                        <input type="text" style="height:80%" class="form-control bg-transparent border-0"
-                               placeholder="Tìm tác giả">
-                    </li>
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.authors.index')}}">Danh sách tác
                             giả</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.authors.create')}}">Thêm</a></li>
-
                 </ul>
             </div>
         </li>
@@ -104,74 +85,16 @@
             </a>
             <div class="collapse" id="ui-advanced">
                 <ul class="nav flex-column sub-menu">
-
-                    <li style="border:1px solid black; height:40px">
-                        <input type="text" style="height:80%" class="form-control bg-transparent border-0"
-                               placeholder="Tìm thể loại">
-                    </li>
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.categories.index')}}">Danh sách thể
                             loại</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.categories.create')}}">Thêm</a></li>
-
                 </ul>
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false"
-               aria-controls="ui-advanced">
-                <span class="menu-title">Advanced UI</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-cards-variant menu-icon"></i>
-            </a>
-            <div class="collapse" id="ui-advanced">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a class="nav-link" href="">Dragula</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Clipboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Context menu</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="">Slider</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Colcade</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Carousel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Loaders</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Tooltip</a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false"
-               aria-controls="ui-advanced">
-                <span class="menu-title">Advanced UI</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-cards-variant menu-icon"></i>
-            </a>
-            <div class="collapse" id="ui-advanced">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a class="nav-link" href="">Dragula</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Clipboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Context menu</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="">Slider</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Colcade</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Carousel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Loaders</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Tooltip</a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">
-                <span class="menu-title">Popups</span>
-
             <a class="nav-link" href="{{route('admin.publishers.index')}}">
                 <span class="menu-title">Nhà xuất bản</span>
                 <i class="mdi mdi-forum menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">
-                <span class="menu-title">Notifications</span>
-                <i class="mdi mdi-bell-ring menu-icon"></i>
             </a>
         </li>
     </ul>

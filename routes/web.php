@@ -89,6 +89,11 @@ Route::prefix('shop')->group(function (){
     Route::post('/home/login',[ShopController::class,'login'])->name('shop.login');
     Route::get('/home/logout',[ShopController::class,'logout'])->name('shop.logout');
     Route::post('/home/register',[ShopController::class,'register'])->name('shop.register');
+    Route::get('{id}/customerProfile',[ShopController::class,'showCustomerProfile'])->name('shop.profile');
+    Route::post('{id}/customerProfile',[ShopController::class,'editProfile'])->name('shop.edit-customer-profile');
+    Route::get('/customerProfile',[ShopController::class,'comeBack'])->name('shop.comeback');
+
+
 });
 
 Auth::routes();

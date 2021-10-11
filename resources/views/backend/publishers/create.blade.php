@@ -1,8 +1,4 @@
-
-<<<<<<< HEAD
-=======
 @extends('backend.layout.master')
-
 @section('content')
     <div class="col-12 col-md-12">
         <div class="row">
@@ -73,5 +69,3 @@
     </div>
 @endsection
 
-
->>>>>>> 55af30c4f26b9064dd469e5d5ef264bf4ddf7ca5

@@ -91,6 +91,4 @@ Route::prefix('shop')->group(function (){
     Route::post('/home/register',[ShopController::class,'register'])->name('shop.register');
 });
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

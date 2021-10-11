@@ -19,7 +19,7 @@
         </li>
         <li class="nav-item">
 
-            <a class="nav-link" href="{{route('homepage')}}">
+            <a class="nav-link" href="{{route('admin.layout.dashboard')}}">
 
                 <span class="menu-title">Trang chủ</span>
                 <i class="mdi mdi-home menu-icon"></i>
@@ -34,11 +34,6 @@
             </a>
             <div class="collapse" id="page-layouts">
                 <ul class="nav flex-column sub-menu">
-                    <li style="border:1px solid black; height:40px">
-                        <input type="text" style="height:80%" class="form-control bg-transparent border-0"
-                               placeholder="Tìm khách hàng">
-                    </li>
-
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.customers.index')}}">Danh sách khách
                             hàng</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.customers.create')}}">Thêm</a></li>
@@ -57,16 +52,9 @@
             </a>
             <div class="collapse" id="sidebar-layouts">
                 <ul class="nav flex-column sub-menu">
-
-                    <li style="border:1px solid black; height:40px">
-                        <input type="text" style="height:80%" class="form-control bg-transparent border-0"
-                               placeholder="Tìm sản phẩm">
-                    </li>
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.books.index')}}">Danh sách sản
                             phẩm</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.books.create')}}">Thêm</a></li>
-
                 </ul>
             </div>
         </li>
@@ -80,16 +68,9 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-
-                    <li style="border:1px solid black; height:40px">
-                        <input type="text" style="height:80%" class="form-control bg-transparent border-0"
-                               placeholder="Tìm tác giả">
-                    </li>
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.authors.index')}}">Danh sách tác
                             giả</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.authors.create')}}">Thêm</a></li>
-
                 </ul>
             </div>
         </li>
@@ -104,20 +85,14 @@
             </a>
             <div class="collapse" id="ui-advanced">
                 <ul class="nav flex-column sub-menu">
-
-                    <li style="border:1px solid black; height:40px">
-                        <input type="text" style="height:80%" class="form-control bg-transparent border-0"
-                               placeholder="Tìm thể loại">
-                    </li>
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.categories.index')}}">Danh sách thể
                             loại</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="{{route('admin.categories.create')}}">Thêm</a></li>
-
                 </ul>
             </div>
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false"
                aria-controls="ui-advanced">
                 <span class="menu-title">Advanced UI</span>
@@ -166,13 +141,11 @@
             <a class="nav-link" href="{{route('admin.publishers.index')}}">
                 <span class="menu-title">Nhà xuất bản</span>
 
+=======
+            <a class="nav-link" href="{{route('admin.publishers.index')}}">
+                <span class="menu-title">Nhà xuất bản</span>
+>>>>>>> ba5e82558c312c1fa4e1ad63d55ce69f3e7cc47a
                 <i class="mdi mdi-forum menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="">
-                <span class="menu-title">Notifications</span>
-                <i class="mdi mdi-bell-ring menu-icon"></i>
             </a>
         </li>
     </ul>

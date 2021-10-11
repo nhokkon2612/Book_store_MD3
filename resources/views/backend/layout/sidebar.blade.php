@@ -118,7 +118,6 @@
             </div>
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
             <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false"
                aria-controls="ui-advanced">
                 <span class="menu-title">Advanced UI</span>
@@ -163,10 +162,9 @@
         <li class="nav-item">
             <a class="nav-link" href="">
                 <span class="menu-title">Popups</span>
-=======
+
             <a class="nav-link" href="{{route('admin.publishers.index')}}">
                 <span class="menu-title">Nhà xuất bản</span>
->>>>>>> 55af30c4f26b9064dd469e5d5ef264bf4ddf7ca5
                 <i class="mdi mdi-forum menu-icon"></i>
             </a>
         </li>

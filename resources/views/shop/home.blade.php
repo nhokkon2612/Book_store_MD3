@@ -74,8 +74,8 @@
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div  class="">
-                                            <img class="product" src="{{ asset($book->image) }}" alt="" />
-                                            <h2>{{ $book->price }} Vnđ  </h2>
+                                            <img class="product" src="{{ asset('storage/'.$book->image) }}" alt="" />
+                                            <h2> {{ number_format($book->price) }}  </h2>
                                             <p>{{ $book->name }}</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>

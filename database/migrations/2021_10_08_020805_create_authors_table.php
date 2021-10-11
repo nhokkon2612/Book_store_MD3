@@ -18,7 +18,7 @@ class CreateAuthorsTable extends Migration
             $table->string('name');
             $table->date('date_of_birth');
             $table->date('date_of_die');
-            $table->text('live_die_unknow')->default(0);
+            $table->integer('live_die_unknow')->default(0);
             $table->text('career');
             $table->text('school')->nullable();
             $table->text('image');

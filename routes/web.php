@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admins\BookController;
 use App\Http\Controllers\Admins\CategoryController;
 use App\Http\Controllers\Admins\CustomerController;
+use App\Http\Controllers\Admins\GoogleController;
 use App\Http\Controllers\Admins\LoginController;
 use App\Http\Controllers\Admins\PublisherController;
 use App\Http\Controllers\Admins\UserController;
@@ -85,5 +86,13 @@ Route::prefix('shop')->group(function (){
     Route::post('/home/login',[ShopController::class,'login'])->name('shop.login');
     Route::get('/home/logout',[ShopController::class,'logout'])->name('shop.logout');
     Route::post('/home/register',[ShopController::class,'register'])->name('shop.register');
+    Route::get('{id}/customerProfile',[ShopController::class,'showCustomerProfile'])->name('shop.profile');
+    Route::post('{id}/customerProfile',[ShopController::class,'editProfile'])->name('shop.edit-customer-profile');
+    Route::get('/customerProfile',[ShopController::class,'comeBack'])->name('shop.comeback');
 });
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::prefix('google')->name('google.')->group( function(){
+    Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login.admin');
+    Route::any('callback', [GoogleController::class, 'callbackFromGoogle'])->name('callback.admin');
+});

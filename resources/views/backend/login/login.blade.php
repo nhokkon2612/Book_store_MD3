@@ -90,7 +90,11 @@
                 </div>
 
                 <div class="flex-col-c p-t-155">
+<<<<<<< HEAD
+                    <a href="{{route('showFormRegister')}}" class="txt2">
+=======
                     <a href="" class="txt2">
+>>>>>>> bc331b990832a4e19fe474666d2316a99c453cda
                         Đăng kí
                     </a>
                 </div>

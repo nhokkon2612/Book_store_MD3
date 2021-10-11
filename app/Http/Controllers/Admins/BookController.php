@@ -12,10 +12,8 @@ class BookController extends Controller
 {
     public function index()
     {
-        $books = Book::paginate(4);
-//        $books = Book::with('categories','author','publisher')->get();
+        $books = Book::with('categories', 'author', 'publisher')->paginate(4);
         return view('backend.books.list', compact('books'));
-
     }
 
     public function create()
@@ -37,11 +35,9 @@ class BookController extends Controller
         $book->price = $request->input('price');
         $book->quantity_import = $request->input('quantity_import');
         $book->quantity_now = $request->input('quantity_now');
-        $book->author_id = $request->input('author_id');
-        $book->publisher_id = $request->input('publisher_id');
         $book->save();
         session::flash('success', 'Tạo mới thành công');
-        return redirect()->route('admin.books.index');
+        return redirect()->route('backend.books.index');
     }
 
     public function edit($id)

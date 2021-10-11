@@ -14,18 +14,8 @@
     <link rel="shortcut icon" href="{{asset('master/images/favicon.png')}}"/>
 </head>
 <body class="error404 woocommerce-no-js lightbox nav-dropdown-has-arrow">
-{{--<div>--}}
-
-
-
-{{--    @include('backend.layout.navbar')--}}
-{{--    @include('backend.book.list')--}}
-{{--    @include('backend.layout.sidebar')--}}
-{{--</div>--}}
-
 <div class="container-scroller">
     @include('backend.layout.navbar')
-
     <div class="container-fluid page-body-wrapper">
         <div id="settings-trigger"><i class="mdi mdi-settings"></i></div>
         <div id="theme-settings" class="settings-panel">
@@ -50,23 +40,15 @@
                 <div class="tiles default light"></div>
             </div>
         </div>
-
-
     @include('backend.layout.sidebar')
-    <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
                 @yield('content')
             </div>
             @include('backend.layout.footer')
         </div>
-
-        <!-- main-panel ends -->
     </div>
-    <!-- page-body-wrapper ends -->
 </div>
-
-
 <script src="{{asset('master/vendors/js/vendor.bundle.base.js')}}"></script>
 <script src="{{asset('master/vendors/js/vendor.bundle.addons.js')}}"></script>
 <script src="{{asset('master/js/off-canvas.js')}}"></script>

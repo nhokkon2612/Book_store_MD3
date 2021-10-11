@@ -1,3 +1,6 @@
+
+<?php
+
 @extends('backend.layout.master')
 
 @section('content')
@@ -52,3 +55,4 @@
         </form>
     </div>
 @endsection
+

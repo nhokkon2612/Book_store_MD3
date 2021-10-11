@@ -6,6 +6,7 @@ use App\Http\Controllers\Admins\CustomerController;
 use App\Http\Controllers\Admins\LoginController;
 use App\Http\Controllers\Admins\PublisherController;
 use App\Http\Controllers\Admins\UserController;
+use App\Http\Controllers\Shop\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admins\AuthorsController;
 
@@ -19,8 +20,9 @@ use App\Http\Controllers\Admins\AuthorsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
-    return view('backend.layout.page');
+    return view('backend.layout.dashboard');
 })->name('homepage');
 
 Route::get('/1', function () {
@@ -80,3 +82,15 @@ Route::prefix('publishers')->group(function () {
     Route::post('{id}/edit', [PublisherController::class, 'update'])->name('admin.publishers.update');
     Route::get('{id}/destroy', [PublisherController::class, 'destroy'])->name('admin.publishers.destroy');
 });
+
+Route::prefix('shop')->group(function (){
+    Route::get('/home',[ShopController::class,'showHome'])->name('shop.home');
+    Route::get('/home/login',[ShopController::class,'showFormLogin'])->name('shop.formLogin');
+    Route::post('/home/login',[ShopController::class,'login'])->name('shop.login');
+    Route::get('/home/logout',[ShopController::class,'logout'])->name('shop.logout');
+    Route::post('/home/register',[ShopController::class,'register'])->name('shop.register');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

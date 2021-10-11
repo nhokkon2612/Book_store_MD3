@@ -13,7 +13,6 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::paginate(4);
-
         return view('backend.categories.list', compact('categories'));
 
     }

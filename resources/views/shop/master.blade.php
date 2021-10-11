@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,10 @@
     <link href="{{asset('templateUser/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('templateUser/css/responsive.css')}}" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
     <script src="{{asset('templateUser/js/html5shiv.js')}}"></script>
     <script src="js/respond.min.js"></script>
+
     <![endif]-->
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
@@ -24,15 +26,15 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
-
 <body>
+@include('sweetalert::alert')
 @include('shop.layouts.navbar')
 
 
 @yield('content')
 
 @include('shop.layouts.footer')
-
+<script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
 <script src="{{asset('templateUser/js/jquery.js')}}"></script>
 <script src="{{asset('templateUser/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('templateUser/js/jquery.scrollUp.min.js')}}"></script>

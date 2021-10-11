@@ -14,13 +14,13 @@ class UserController extends Controller
     {
         $users = User::all();
 
-        return view('User.list', compact('users'));
+        return view('backend.users.list', compact('users'));
 
     }
 
     public function create()
     {
-        return view('users.create');
+        return view('backend.users.create');
     }
 
     public function store(Request $request): \Illuminate\Http\RedirectResponse
@@ -39,13 +39,13 @@ class UserController extends Controller
         $users->date_of_birth = $request->input('date_of_birth');
         $users->save();
         session::flash('success', 'Tạo mới thành công');
-        return redirect()->route('users.index');
+        return redirect()->route('admin.users.index');
     }
 
     public function edit($id)
     {
         $users = User::find($id);
-        return view('users.edit', compact('users'));
+        return view('backend.users.edit', compact('users'));
     }
 
     public function update(request $request, $id)
@@ -69,7 +69,7 @@ class UserController extends Controller
         $users->save();
         Session::flash('success', 'Cập nhật thành công');
         //tao moi xong quay ve trang danh sach task
-        return redirect()->route('users.index');
+        return redirect()->route('admin.users.index');
     }
     public function destroy($id){
         $users = User::find($id);
@@ -83,6 +83,6 @@ class UserController extends Controller
 
         $users->delete();
         Session::flash('success','Xóa thành công');
-        return redirect()->route('users.index');
+        return redirect()->route('admin.users.index');
     }
 }

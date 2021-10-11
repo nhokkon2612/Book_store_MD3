@@ -13,7 +13,9 @@
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Top khách hàng tiềm năng</h4>
+                    <div class="col-sm-6">
+                        <h2>Bảng <b>Danh sách sản phẩm</b></h2>
+                    </div>
                     <div class="table-responsive">
                         <h3 class="card-title">
                             <a class="btn btn-primary" href="{{ route('admin.books.create') }}">Thêm mới</a>

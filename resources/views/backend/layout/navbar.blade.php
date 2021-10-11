@@ -98,7 +98,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown"
                    data-toggle="dropdown">
                     <i class="mdi mdi-bell-outline"></i>
                     <span class="count-symbol bg-danger"></span>
@@ -153,15 +153,11 @@
                 </div>
             </li>
             <li class="nav-item nav-logout d-none d-lg-block">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('admin.logout')}}">
                     <i class="mdi mdi-power"></i>
                 </a>
             </li>
-            <li class="nav-item nav-settings d-none d-lg-block">
-                <a class="nav-link" href="#">
-                    <i class="mdi mdi-format-line-spacing"></i>
-                </a>
-            </li>
+
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
                 data-toggle="offcanvas">

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admins\GoogleController;
 use App\Http\Controllers\Admins\LoginController;
 use App\Http\Controllers\Admins\PublisherController;
 use App\Http\Controllers\Admins\UserController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Shop\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admins\AuthorsController;
@@ -89,9 +90,9 @@ Route::prefix('shop')->group(function (){
     Route::post('{id}/customerProfile',[ShopController::class,'editProfile'])->name('shop.edit-customer-profile');
     Route::get('/customerProfile',[ShopController::class,'comeBack'])->name('shop.comeback');
 });
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('google')->name('google.')->group( function(){
     Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login.admin');
     Route::any('callback', [GoogleController::class, 'callbackFromGoogle'])->name('callback.admin');
 });
-

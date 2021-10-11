@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-class LoginController extends Controller
+class   LoginController extends Controller
 {
     public function showLogin(){
         return view('backend.login.login');
@@ -16,12 +16,10 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-
         $data = $request->only('email', 'password');
-
         if (Auth::attempt($data)) {
             $request->session()->regenerate();
-            return redirect()->route('backend.layout.dashboard');
+            return redirect()->route('admin.layout.dashboard');
         }
         $message = 'Đăng nhập không thành công. Tên người dùng hoặc mật khẩu không đúng.';
         $request->session()->flash('login-fail', $message);
@@ -31,8 +29,7 @@ class LoginController extends Controller
     }
     public function logout(){
         Auth::logout();
-        return redirect()->route('show.login');
-
+        return redirect()->route('admin.showLogin');
     }
     public function showChangePassword()
     {

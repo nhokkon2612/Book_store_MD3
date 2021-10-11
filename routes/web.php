@@ -7,6 +7,7 @@ use App\Http\Controllers\Admins\GoogleController;
 use App\Http\Controllers\Admins\LoginController;
 use App\Http\Controllers\Admins\PublisherController;
 use App\Http\Controllers\Admins\UserController;
+use App\Http\Controllers\Shop\CartController;
 use App\Http\Controllers\Shop\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admins\AuthorsController;
@@ -78,16 +79,25 @@ Route::middleware('checklogin.admin')->prefix('/admins')->group(function () {
     });
 });
 
-
 Route::prefix('shop')->group(function (){
     Route::get('/home',[ShopController::class,'showHome'])->name('shop.home');
     Route::get('/home/login',[ShopController::class,'showFormLogin'])->name('shop.formLogin');
     Route::post('/home/login',[ShopController::class,'login'])->name('shop.login');
     Route::get('/home/logout',[ShopController::class,'logout'])->name('shop.logout');
     Route::post('/home/register',[ShopController::class,'register'])->name('shop.register');
+    Route::get('{id}/customerProfile',[ShopController::class,'showCustomerProfile'])->name('shop.profile');
+    Route::post('{id}/customerProfile',[ShopController::class,'editProfile'])->name('shop.edit-customer-profile');
+    Route::get('/customerProfile',[ShopController::class,'comeBack'])->name('shop.comeback');
+    Route::prefix('/cart')->group(function (){
+        Route::get('/{id}/addToCart',[CartController::class,'addToCart'])->name('shop.addToCart');
+        Route::get('/showCart',[CartController::class,'showCart'])->name('shop.showCart');
+        Route::post('/updateCart',[CartController::class,'update'])->name('shop.updateCart');
+        Route::middleware('checkLogin.customer')->get('/checkOut',[CartController::class,'checkout'])->name('shop.checkout');
+    });
 });
 
 Route::prefix('google')->name('google.')->group( function(){
     Route::get('login', [GoogleController::class, 'loginWithGoogle'])->name('login.admin');
     Route::any('callback', [GoogleController::class, 'callbackFromGoogle'])->name('callback.admin');
 });
+

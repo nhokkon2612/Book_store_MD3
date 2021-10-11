@@ -1,5 +1,8 @@
 @extends('backend.layout.master')
+<<<<<<< HEAD
 @section('content')
+=======
+>>>>>>> 4db5697f00b5695a50612e3c61642c4921fa6a5e
 @section('content')
     <style>
         #d-flex justify-content-center{

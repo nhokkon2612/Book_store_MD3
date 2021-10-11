@@ -17,7 +17,7 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <!--[if lt IE 9]>
     <script src="{{asset('templateUser/js/html5shiv.js')}}"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="{{asset('templateUser/js/respond.min.js')}}"></script>
 
     <![endif]-->
     <link rel="shortcut icon" href="images/ico/favicon.ico">

@@ -35,9 +35,11 @@ class BookController extends Controller
         $book->price = $request->input('price');
         $book->quantity_import = $request->input('quantity_import');
         $book->quantity_now = $request->input('quantity_now');
+        $book->author_id = $request->input('author_id');
+        $book->publisher_id = $request->input('publisher_id');
         $book->save();
         session::flash('success', 'Tạo mới thành công');
-        return redirect()->route('backend.books.index');
+        return redirect()->route('admin.books.index');
     }
 
     public function edit($id)
@@ -64,6 +66,8 @@ class BookController extends Controller
         $book->price = $request->input('price');
         $book->quantity_import = $request->input('quantity_import');
         $book->quantity_now = $request->input('quantity_now');
+        $book->author_id = $request->input('author_id');
+        $book->publisher_id = $request->input('publisher_id');
         $book->save();
         Session::flash('success', 'Cập nhật thành công');
         //tao moi xong quay ve trang danh sach task

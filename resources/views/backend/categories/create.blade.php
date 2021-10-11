@@ -19,16 +19,7 @@
                             <div class="form-group">
                                 <label>Thể loại</label>
                                 <div class="col-sm-9">
-                                    <select class="form-control" name="name" required>
-                                        <option>Sách Chính trị – pháp luật</option>
-                                        <option>Sách Khoa học công nghệ – Kinh tế</option>
-                                        <option>Sách Văn học nghệ thuật</option>
-                                        <option>Sách Văn hóa xã hội – Lịch sử</option>
-                                        <option>Sách Giáo trình</option>
-                                        <option>Sách Truyện, tiểu thuyết</option>
-                                        <option>Sách Tâm lý, tâm linh, tôn giáo</option>
-                                        <option>Sách Sách thiếu nhi</option>
-                                    </select>
+                                   <input type="text" class="form-control" name="name" required>
                                 </div>
                             </div>
                             <div class="form-group">

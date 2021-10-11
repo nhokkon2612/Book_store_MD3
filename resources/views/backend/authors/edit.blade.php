@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 @extends('backend.layout.master')
 
 @section('content')
@@ -16,36 +13,24 @@
             <div class="card">
                 <div class="card-body">
                     <div class="col-12">
-                        <form method="post" action="{{ route('admin.authors.store') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('admin.authors.update',$author->id) }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label>Tên tác giả</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="name" placeholder="Enter name" required>
+                                    <input type="text" class="form-control" name="name" value="{{ $author->name }}" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Ảnh</label>
                                 <div class="col-sm-9">
-                                    <input type="file" class="form-control-file" name="image" required>
+                                    <input type="file" name="image" class="form-control-file" >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Tiểu sử tác giả</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="career" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Năm sinh</label>
-                                <div class="col-sm-9">
-                                    <input type="date" class="form-control" name="date_of_birth" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Năm mất</label>
-                                <div class="col-sm-9">
-                                    <input type="date" class="form-control" name="date_of_die" required>
+                                    <input type="text" class="form-control" name="career" value="{{ $author->career }}" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -59,9 +44,22 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Năm sinh</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="date" name="date_of_birth" value="{{ $author->date_of_birth }}" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Năm mất</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="date" name="date_of_die" value="{{ $author->data_of_die}}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Nơi làm việc</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="school" required>
+                                    <input class="form-control" type="text" name="school" value="{{ $author->school }}" required>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Thêm mới</button>
@@ -73,4 +71,4 @@
         </div>
     </div>
 @endsection
->>>>>>> 55af30c4f26b9064dd469e5d5ef264bf4ddf7ca5
+

@@ -1,13 +1,10 @@
-
-<<<<<<< HEAD
-=======
 @extends('backend.layout.master')
 
 @section('content')
     <div class="col-12 col-md-12">
         <div class="row">
-            <div class="col-12">
-                <h1>Thêm mới thể loại</h1>
+            <div class="col-sm-6">
+                <h2>Bảng <b>thêm mới thể loại sách</b></h2>
             </div>
         </div>
     </div>
@@ -16,10 +13,10 @@
             <div class="card">
                 <div class="card-body">
                     <div class="col-12">
-                        <form method="post" action="{{ route('admin.categories.store') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('admin.publishers.update',$publisher->id) }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label>Thể loại</label>
+                                <label>Nhà xuất bản</label>
                                 <div class="col-sm-9">
                                     <select class="form-control" name="name" required>
                                         <option>Bách khoa Hà Nội</option>
@@ -60,7 +57,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Mô tả</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control-file" name="description" required>
+                                    <input type="text" class="form-control" name="description" value="{{ $publisher->description }}" required>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Thêm mới</button>
@@ -74,4 +71,4 @@
 @endsection
 
 
->>>>>>> 55af30c4f26b9064dd469e5d5ef264bf4ddf7ca5
+

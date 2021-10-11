@@ -40,7 +40,7 @@
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
                             @if(session('customer-info'))
-                                <li><a href=""><i class="fa fa-user"></i> {{ session('customer-info')->name  }} </a></li>
+                                <li><a href="{{ route('shop.profile',session('customer-info')->id) }}"><i class="fa fa-user"></i> {{ session('customer-info')->name  }} </a></li>
                             @else
                             <li><a href=""><i class="fa fa-user"></i> Tài khoản</a></li>
                             @endif

@@ -92,6 +92,51 @@
             </div>
         </li>
         <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false"
+               aria-controls="ui-advanced">
+                <span class="menu-title">Advanced UI</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-cards-variant menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-advanced">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="">Dragula</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Clipboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Context menu</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="">Slider</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Colcade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Carousel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Loaders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Tooltip</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false"
+               aria-controls="ui-advanced">
+                <span class="menu-title">Advanced UI</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-cards-variant menu-icon"></i>
+            </a>
+            <div class="collapse" id="ui-advanced">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="">Dragula</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Clipboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Context menu</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="">Slider</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Colcade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Carousel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Loaders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Tooltip</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">
+                <span class="menu-title">Popups</span>
+            </a>
             <a class="nav-link" href="{{route('admin.publishers.index')}}">
                 <span class="menu-title">Nhà xuất bản</span>
                 <i class="mdi mdi-forum menu-icon"></i>

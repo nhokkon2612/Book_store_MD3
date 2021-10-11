@@ -10,6 +10,7 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ShopController extends Controller
@@ -61,6 +62,37 @@ class ShopController extends Controller
         $customer->name = $request->name;
         $customer->email = $request->email;
         $customer->password = $request->password;
+        $customer->address = $request->address;
+        $customer->phone = $request->phone;
+        $customer->date_of_birth = $request->dateOfBirth;
+        $customer->save();
+        return redirect()->back();
+    }
+
+    public function showCustomerProfile($id)
+    {
+        $customer = Customer::findOrFail($id);
+        return view('shop.customer-profile',compact('customer'));
+    }
+
+    public function comeBack()
+    {
+        return redirect()->route('shop.home');
+    }
+
+    public function editProfile(Request $request,$id)
+    {
+        $customer = Customer::findOrFail($id);
+        if ($request->hasFile('image')) {
+            $currentImg = $customer->image;
+            if ($currentImg) {
+                Storage::delete('/public/', $currentImg);
+            }
+            $image = $request->file('image');
+            $path = $image->store('image', 'public');
+            $customer->image = $path;
+        }
+        $customer->name = $request->name;
         $customer->address = $request->address;
         $customer->phone = $request->phone;
         $customer->date_of_birth = $request->dateOfBirth;

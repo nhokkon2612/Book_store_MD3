@@ -1,8 +1,4 @@
-
-<?php
-
 @extends('backend.layout.master')
-
 @section('content')
     <div class="col-12"><h1>Cập nhật sách</h1></div>
     <div class="col-12">

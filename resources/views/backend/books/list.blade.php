@@ -1,6 +1,5 @@
 @extends('backend.layout.master')
 @section('content')
-@section('content')
     <style>
         #d-flex justify-content-center{
             position: relative;

@@ -45,7 +45,7 @@
                             <li><a href=""><i class="fa fa-user"></i> Tài khoản</a></li>
                             @endif
                             <li><a href="checkout.html"><i class="fa fa-crosshairs"></i>Thanh toán</a></li>
-                            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                            <li><a href="{{route('shop.showCart')}}"><i class="fa fa-shopping-cart"></i>Giỏ hàng({{count((array)session('cart'))}})</a></li>
                             @if(session('customer-info'))
                                 <li><a href="{{ route('shop.logout') }}"><i class="fa fa-sign-out"></i>Đăng xuất</a></li>
                             @else

@@ -68,7 +68,3 @@
         </div>
     </div>
 @endsection
-<<<<<<< HEAD
-
-=======
->>>>>>> ba5e82558c312c1fa4e1ad63d55ce69f3e7cc47a

@@ -1,14 +1,13 @@
 <?php
 
 use App\Http\Controllers\Admins\BookController;
-use App\Http\Controllers\Admins\CategorieController;
 use App\Http\Controllers\Admins\CategoryController;
 use App\Http\Controllers\Admins\CustomerController;
+use App\Http\Controllers\Admins\LoginController;
 use App\Http\Controllers\Admins\PublisherController;
 use App\Http\Controllers\Admins\UserController;
-use App\Http\Controllers\ShopController;
+use App\Http\Controllers\Shop\ShopController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admins\LoginController;
 use App\Http\Controllers\Admins\AuthorsController;
 
 /*
@@ -22,13 +21,18 @@ use App\Http\Controllers\Admins\AuthorsController;
 |
 */
 
-Route::get('/cart',function (){
-    return view('backend.book.list');
-});
+Route::get('/', function () {
+    return view('backend.layout.dashboard');
+})->name('homepage');
+
 Route::get('/1', function () {
     return view('backend.layout.dashboard');
 });
+Route::get('/2', function () {
+    return view('layouts.master');
+});
 
+Route::get('/login', [LoginController::class,'showLogin'])->name('admin.login');
 
 Route::prefix('books')->group(function () {
     Route::get('/', [BookController::class, 'index'])->name('admin.books.index');
@@ -86,3 +90,7 @@ Route::prefix('shop')->group(function (){
     Route::get('/home/logout',[ShopController::class,'logout'])->name('shop.logout');
     Route::post('/home/register',[ShopController::class,'register'])->name('shop.register');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

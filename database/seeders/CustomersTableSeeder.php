@@ -4,8 +4,9 @@ namespace Database\Seeders;
 
 use App\Models\Customer;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
-class CustomersTableSeeder extends Seeder
+class   CustomersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +18,7 @@ class CustomersTableSeeder extends Seeder
         $customer = new Customer();
         $customer->name = "Trần Văn Ngọc";
         $customer->email = "tranngoc@gmail.com";
-        $customer->password = "123456";
+        $customer->password = Hash::make("123456");
         $customer->image = "";
         $customer->address = "Thái Bình";
         $customer->phone = "0375112345";
@@ -27,7 +28,7 @@ class CustomersTableSeeder extends Seeder
         $customer = new Customer();
         $customer->name = "Ngô Quốc Thịnh";
         $customer->email = "thinhcubi27@gmail.com";
-        $customer->password = "123456";
+        $customer->password = Hash::make("123456");
         $customer->image = "";
         $customer->address = "Lào Cai";
         $customer->phone = "020201020";
@@ -37,7 +38,7 @@ class CustomersTableSeeder extends Seeder
         $customer = new Customer();
         $customer->name = "Hà Huy Cường";
         $customer->email = "huycuong@gmail.com";
-        $customer->password = "123456";
+        $customer->password = Hash::make("123456");
         $customer->image = "";
         $customer->address = "Hà Nam";
         $customer->phone = "0301049271";

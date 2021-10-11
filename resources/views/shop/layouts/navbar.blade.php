@@ -40,7 +40,7 @@
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
                             @if(session('customer-info'))
-                                <li><a href=""><i class="fa fa-user"></i> {{ session('customer-info')[0]->name  }} </a></li>
+                                <li><a href=""><i class="fa fa-user"></i> {{ session('customer-info')->name  }} </a></li>
                             @else
                             <li><a href=""><i class="fa fa-user"></i> Tài khoản</a></li>
                             @endif
@@ -76,7 +76,7 @@
                 </div>
                 <div class="mainmenu pull-left">
                     <ul class="nav navbar-nav collapse navbar-collapse">
-                        <li><a href="index.html" class="active">Trang chủ</a></li>
+                        <li><a href="{{ route('shop.home') }}" class="active">Trang chủ</a></li>
                         <li class="dropdown"><a href="#">Cửa Hàng<i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
                                 <li><a href="shop.html">Sách</a></li>

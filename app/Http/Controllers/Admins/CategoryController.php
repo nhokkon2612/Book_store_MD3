@@ -12,8 +12,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::all();
-
+        $categories = Category::paginate(4);
         return view('backend.categories.list', compact('categories'));
 
     }
@@ -30,7 +29,7 @@ class CategoryController extends Controller
         $categories->description = $request->input('description');
         $categories->save();
         session::flash('success', 'Tạo mới thành công');
-        return redirect()->route('backend.categories.index');
+        return redirect()->route('admin.categories.index');
     }
 
     public function edit($id)
@@ -47,12 +46,12 @@ class CategoryController extends Controller
         $categories->save();
         Session::flash('success', 'Cập nhật thành công');
         //tao moi xong quay ve trang danh sach task
-        return redirect()->route('backend.categories.index');
+        return redirect()->route('admin.categories.index');
     }
     public function destroy($id){
         $categories = Category::find($id);
         $categories->delete();
         Session::flash('success','Xóa thành công');
-        return redirect()->route('backend.categories.index');
+        return redirect()->route('admin.categories.index');
     }
 }

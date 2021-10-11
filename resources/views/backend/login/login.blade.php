@@ -34,7 +34,7 @@
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
             <form class="login100-form validate-form">
                 @csrf
-					<span class="login100-form-title p-b-49">
+                <span class="login100-form-title p-b-49">
 						Đăng nhập
 					</span>
                 @if (Session::has('login-fail'))
@@ -90,7 +90,11 @@
                 </div>
 
                 <div class="flex-col-c p-t-155">
+<<<<<<< HEAD
                     <a href="{{route('showFormRegister')}}" class="txt2">
+=======
+                    <a href="" class="txt2">
+>>>>>>> bc331b990832a4e19fe474666d2316a99c453cda
                         Đăng kí
                     </a>
                 </div>

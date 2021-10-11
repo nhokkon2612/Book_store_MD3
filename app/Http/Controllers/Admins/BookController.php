@@ -12,13 +12,8 @@ class BookController extends Controller
 {
     public function index()
     {
-//        $books = Book::all();
-        $books = Book::with('categories','author','publisher')->get();
-
-        dd($books);
-
+        $books = Book::with('categories', 'author', 'publisher')->paginate(4);
         return view('backend.books.list', compact('books'));
-
     }
 
     public function create()
@@ -47,8 +42,8 @@ class BookController extends Controller
 
     public function edit($id)
     {
-        $books = Book::find($id);
-        return view('backend.books.edit', compact('books'));
+        $book = Book::find($id);
+        return view('backend.books.edit', compact('book'));
     }
 
     public function update(request $request, $id)
@@ -72,20 +67,17 @@ class BookController extends Controller
         $book->save();
         Session::flash('success', 'Cập nhật thành công');
         //tao moi xong quay ve trang danh sach task
-        return redirect()->route('backend.books.index');
+        return redirect()->route('admin.books.index');
     }
     public function destroy($id){
         $book= Book::find($id);
         $image = $book->image;
-
         //delete image
-
         if ($image) {
             Storage::delete('/public/' . $image);
         }
-
         $book->delete();
         Session::flash('success','Xóa thành công');
-        return redirect()->route('backend.books.index');
+        return redirect()->route('admin.books.index');
     }
 }

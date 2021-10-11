@@ -130,14 +130,10 @@
                     <li class="nav-item"><a class="nav-link" href="">Carousel</a></li>
                     <li class="nav-item"><a class="nav-link" href="">Loaders</a></li>
                     <li class="nav-item"><a class="nav-link" href="">Tooltip</a></li>
->>>>>>> 4db5697f00b5695a50612e3c61642c4921fa6a5e
                 </ul>
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="">
-                <span class="menu-title">Popups</span>
-            </a>
             <a class="nav-link" href="{{route('admin.publishers.index')}}">
                 <span class="menu-title">Nhà xuất bản</span>
                 <i class="mdi mdi-forum menu-icon"></i>

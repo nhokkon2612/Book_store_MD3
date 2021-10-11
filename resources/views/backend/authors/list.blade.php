@@ -14,7 +14,9 @@
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Danh sách tác giả</h4>
+                    <div class="col-sm-6">
+                        <h2>Bảng <b>Danh sách tác giả</b></h2>
+                    </div>
                     <div class="table-responsive">
                         <h3 class="card-title">
                             <a class="btn btn-primary" href="{{ route('admin.authors.create') }}">Thêm mới</a>

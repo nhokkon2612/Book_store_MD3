@@ -134,9 +134,6 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="">
-                <span class="menu-title">Popups</span>
-            </a>
             <a class="nav-link" href="{{route('admin.publishers.index')}}">
                 <span class="menu-title">Nhà xuất bản</span>
                 <i class="mdi mdi-forum menu-icon"></i>

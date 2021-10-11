@@ -6,6 +6,7 @@ use App\Http\Controllers\Admins\CustomerController;
 use App\Http\Controllers\Admins\LoginController;
 use App\Http\Controllers\Admins\PublisherController;
 use App\Http\Controllers\Admins\UserController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Shop\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admins\AuthorsController;
@@ -85,4 +86,4 @@ Route::prefix('shop')->group(function (){
     Route::get('/home/logout',[ShopController::class,'logout'])->name('shop.logout');
     Route::post('/home/register',[ShopController::class,'register'])->name('shop.register');
 });
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');

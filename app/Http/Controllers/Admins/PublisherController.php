@@ -10,7 +10,7 @@ class PublisherController extends Controller
 {
     public function index()
     {
-        $publishers = Publisher::paginate();
+        $publishers = Publisher::paginate(5);
 
         return view('backend.publishers.list', compact('publishers'));
 
@@ -32,13 +32,13 @@ class PublisherController extends Controller
         $publishers->address2 = $request->input('address2');
         $publishers->save();
         session::flash('success', 'Tạo mới thành công');
-        return redirect()->route('publishers.index');
+        return redirect()->route('admin.publishers.index');
     }
 
     public function edit($id)
     {
         $publisher = Publisher::find($id);
-        return view('admin.publishers.edit', compact('publisher'));
+        return view('backend.publishers.edit', compact('publisher'));
     }
 
     public function update(request $request, $id)

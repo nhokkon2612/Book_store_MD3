@@ -12,7 +12,7 @@ class AuthorsController extends Controller
 {
     public function index()
     {
-        $authors=Author::all();
+        $authors=Author::paginate(5);
         return view('backend.authors.list',compact('authors'));
     }
     public function create()
@@ -36,13 +36,13 @@ class AuthorsController extends Controller
         }
         $authors->save();
         session::flash('success', 'Tạo mới thành công');
-        return redirect()->route('backend.authors.index');
+        return redirect()->route('admin.authors.index');
     }
 
     public function edit($id)
     {
-        $authors = Author::find($id);
-        return view('backend.authors.edit', compact('authors'));
+        $author = Author::find($id);
+        return view('backend.authors.edit', compact('author'));
     }
 
     public function update(request $request, $id)
@@ -67,7 +67,7 @@ class AuthorsController extends Controller
         $authors->save();
         Session::flash('success', 'Cập nhật thành công');
         //tao moi xong quay ve trang danh sach task
-        return redirect()->route('backend.authors.index');
+        return redirect()->route('admin.authors.index');
     }
     public function destroy($id){
         $authors = Author::find($id);
@@ -81,6 +81,6 @@ class AuthorsController extends Controller
 
         $authors->delete();
         Session::flash('success','Xóa thành công');
-        return redirect()->route('backend.authors.index');
+        return redirect()->route('admin.authors.index');
     }
 }
